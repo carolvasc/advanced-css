@@ -1,0 +1,54 @@
+body {
+    box-sizing: border-box;
+    margin:0;
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container {
+    background-color: white;
+    height: calc( 100vh - 20px );
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 30px 0 30px;
+}
+h1, h2 {
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+}
+h2 {
+    color:white;
+}
+/** Flex Container here **/
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse; /* Direção dos itens. Default: row */
+    flex-wrap: wrap; /* Faz com que os elementos "vazem" ou não do container. Default: nowrap */
+    flex-flow: row wrap; /* Define as duas props acima em uma só */
+}
+
+.flex-element {
+    padding: 10px;
+    background-color: #E53935;
+    flex-grow: 1;
+}
+
+.flex-element:nth-child(1) {
+    order: 2; /* Seta a ordem do item porém não a altera no DOM */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 300px; /* Seta o valor inicial de um item flex */
+    /* Shorthand */
+    flex: 0 0 300px; /* gora shrink basis */
+}
+
+.flex-element:nth-child(2) {
+    order: 3;
+    background-color: #8E24AA;
+    flex-grow: 3; /* Possibilita ao elemento ficar maior que os demais */
+}
+
+.flex-element:nth-child(3) {
+    background-color: #3F51B5;
+    flex-basis: 50px;
+}
