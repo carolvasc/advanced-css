@@ -1,3 +1,16 @@
+:root {
+  /* Fonts */
+  --mainFont: 'Montserrat', sans-serif;
+  --secondFont: 'Krub', sans-serif;
+
+  /* Colors */
+  --white: #FFFFFF;
+  --primary: #FFC107;
+  --secondary: #0097A7;
+  --gray: #757575;
+  --dark: #212121;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -7,6 +20,6 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--secondFont);
   background-color: #F2F2F2;
 }
