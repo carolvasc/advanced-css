@@ -16,14 +16,6 @@ body {
     flex-direction: column;
 }
 
-@media screen and (min-width:768px) {
-    .site-name {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
 .site-name h1 {
     color: white;
 }
@@ -41,15 +33,6 @@ nav a {
     text-decoration: none;
     margin-right: 1rem;
     margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-    nav {
-        flex-direction: row;
-    }
-    nav a {
-        margin-bottom: 0px;
-    }
 }
 
 .container {
@@ -75,31 +58,10 @@ h2 {
     flex-direction: column;
 }
 
-@media screen and (min-width:768px) {
-    .flex-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-.main-content {
-    /* Flex here*/
-}
-
 aside {
     background-color: #03A9F4;
     order: -1;
     margin-bottom: 2rem;
-}
-
-@media screen and (min-width:768px) {
-    .main-content {
-        flex: 0 0 calc(60% - 1rem);
-    }
-    aside {
-        order: 1;
-        flex: 0 0 40%;
-    }
 }
 
 .services {
@@ -110,12 +72,6 @@ aside {
 
 .services .service {
     flex: 1;
-}
-
-@media screen and (min-width:768px) {
-    .services .service {
-        flex: 0 0 calc(33.3% - 1rem);
-    }
 }
 
 .service {
@@ -142,4 +98,34 @@ footer {
 
 footer p {
     color: white;
+}
+
+/* Media Queries */
+
+@media screen and (min-width:768px) {
+    .site-name {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav {
+        flex-direction: row;
+    }
+    nav a {
+        margin-bottom: 0px;
+    }
+    .flex-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main-content {
+        flex: 0 0 calc(60% - 1rem);
+    }
+    aside {
+        order: 1;
+        flex: 0 0 40%;
+    }
+    .services .service {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
 }
