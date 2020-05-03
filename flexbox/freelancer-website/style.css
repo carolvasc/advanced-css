@@ -1,0 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: 1200px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F2F2F2;
+}
