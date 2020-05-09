@@ -2,7 +2,6 @@
   /* Fonts */
   --mainFont: 'Montserrat', sans-serif;
   --secondFont: 'Krub', sans-serif;
-
   /* Colors */
   --white: #FFFFFF;
   --primary: #FFC107;
@@ -13,6 +12,7 @@
 
 html {
   box-sizing: border-box;
+  min-height: 100%;
 }
 
 *, *:before, *:after {
@@ -21,14 +21,30 @@ html {
 
 body {
   font-family: var(--secondFont);
-  background-color: #F2F2F2;
+  min-height: 100%;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+h3 {
+  color: var(--secondary);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+form {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
 .main-navigation {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +61,6 @@ body {
   height: 450px;
   background-image: url(./img/hero.jpg);
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +116,58 @@ body {
   --moz-box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.45);
 }
 
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  background-color: var(--primary);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.icons i {
+  font-size: 1.5rem;
+}
+
+.field {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.field label {
+  flex: 0 0 90px;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field textarea {
+  flex: 1;
+  height: 2.4rem;
+}
+
+.w-100 {
+  flex: 0 0 100%;
+}
+
+.field textarea {
+  height: 4rem;
+}
+
+.submit-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Media Queries */
+
 @media (min-width: 768px) {
   .main-navigation {
     flex-direction: row;
@@ -109,5 +175,24 @@ body {
   }
   .main-navigation a {
     margin-bottom: 0;
+  }
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .service {
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .field {
+    flex: 0 0 calc(50% - 1rem);
   }
 }
