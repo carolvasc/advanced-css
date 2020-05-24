@@ -1,9 +1,21 @@
-$red: blue;
+@import "variables";
+@import "mixins";
 
-body {
-  background-color: $red;
+html {
+  @include box-sizing(border-box);
 }
 
-h1 {
+*,
+*:after,
+*:before {
+  @include box-sizing(inherit);
+}
+
+body {
+  font-family: $mainFont;
+}
+
+.header {
   display: flex;
+  justify-content: space-between;
 }
