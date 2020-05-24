@@ -12,6 +12,16 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,4 +29,26 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.cart-content {
+  position: relative;
+}
+
+.cart-content:hover .content {
+  display: block;
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.cart-content:hover .content .button {
+  background-color: #741D51;
+  padding: 0.5rem 1rem;
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
 }
