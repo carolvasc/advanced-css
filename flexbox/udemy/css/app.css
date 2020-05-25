@@ -36,12 +36,18 @@ body {
   position: relative;
 }
 
+.cart-content .img-cart {
+  max-width: 160px;
+  cursor: pointer;
+}
+
 .cart-content:hover .content {
   display: block;
   position: absolute;
   right: 0;
   padding: 1rem;
-  max-width: 400px;
+  width: 400px;
+  background-color: #FFFFFF;
 }
 
 .cart-content:hover .content .button {
@@ -98,6 +104,7 @@ body {
   display: block;
   text-indent: -9999px;
   border: none;
+  cursor: pointer;
   width: 3rem;
   height: 3rem;
   background-color: transparent;
